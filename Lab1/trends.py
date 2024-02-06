@@ -86,7 +86,7 @@ x = np.linspace(numpy_x.min(), numpy_x.max()) # набор данных для x
 plt.plot(x, polinom_trend(x), linestyle='dashed', color="orange", label = 'polinomial trend') # полиномиальный тренд
 plt.grid(color="gainsboro") # Сетка
 plt.legend(loc = 'center left', fontsize=10, bbox_to_anchor=(1, 0.5)) 
-plt.title("Полиномиальный \n$R^2=$" + str(polinom_r2) + "\n${0}x^8 + {1}x^7 + {2}x^6 + {3}x^5 + {4}x^4 + {5}x^3 + {6}x^2 + {7}x + {8}$".format(*set_polinom_by_data))
+plt.title("Полиномиальный \n$R^2=$" + str(polinom_r2) + "\n{0}x^8 + {1}x^7 + {2}x^6 +\n {3}x^5 + {4}x^4 + {5}x^3 + \n {6}x^2 + {7}x + {8}".format(*set_polinom_by_data))
 
 # !!! Текущая ячейка - 3
 plt.subplot(2, 2, 3)
