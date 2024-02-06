@@ -44,9 +44,9 @@ linear_trend = np.poly1d(set_line_by_data) # снижение размернос
 print("{0}x + {1}".format(*set_line_by_data)) # формула
 
 # полиномиальный
-set_polinom_by_data = np.polyfit(numpy_x, numpy_y, 6) # работа с полиномом 6 степени
+set_polinom_by_data = np.polyfit(numpy_x, numpy_y, 10) # работа с полиномом 6 степени
 polinom_trend = np.poly1d(set_polinom_by_data) # Рассчитать значение полинома в точках x
-print("${0}x^6 + {1}x^5 + {2}x^4 + {3}x^3 + {4}x^2 + {5}x + {6}$".format(*set_polinom_by_data)) # формула
+print("${0}x^8 + {1}x^7 + {2}x^6 + {3}x^5 + {4}x^4 + {5}x^3 + {6}x^2 + {7}x + {8}$".format(*set_polinom_by_data)) # формула
 
 # логарифмический
 set_log_by_data = np.polyfit(np.log(numpy_x), numpy_y, 1) # работа с полиномом 1 степени + логарифмирование x
@@ -86,7 +86,7 @@ x = np.linspace(numpy_x.min(), numpy_x.max()) # набор данных для x
 plt.plot(x, polinom_trend(x), linestyle='dashed', color="orange", label = 'polinomial trend') # полиномиальный тренд
 plt.grid(color="gainsboro") # Сетка
 plt.legend(loc = 'center left', fontsize=10, bbox_to_anchor=(1, 0.5)) 
-plt.title("Полиномиальный \n$R^2=$" + str(polinom_r2) + "\n${0}x^6 + {1}x^5$ + \n${2}x^4 + {3}x^3$ + \n${4}x^2 + {5}x$ + \n${6}$".format(*set_polinom_by_data))
+plt.title("Полиномиальный \n$R^2=$" + str(polinom_r2) + "\n${0}x^8 + {1}x^7 + {2}x^6 + {3}x^5 + {4}x^4 + {5}x^3 + {6}x^2 + {7}x + {8}$".format(*set_polinom_by_data))
 
 # !!! Текущая ячейка - 3
 plt.subplot(2, 2, 3)
