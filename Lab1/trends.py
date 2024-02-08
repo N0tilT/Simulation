@@ -44,7 +44,7 @@ linear_trend = np.poly1d(set_line_by_data) # снижение размернос
 print("{0}x + {1}".format(*set_line_by_data)) # формула
 
 # полиномиальный
-set_polinom_by_data = np.polyfit(numpy_x, numpy_y, 10) # работа с полиномом 6 степени
+set_polinom_by_data = np.polyfit(numpy_x, numpy_y, 8) # работа с полиномом 6 степени
 polinom_trend = np.poly1d(set_polinom_by_data) # Рассчитать значение полинома в точках x
 print("${0}x^8 + {1}x^7 + {2}x^6 + {3}x^5 + {4}x^4 + {5}x^3 + {6}x^2 + {7}x + {8}$".format(*set_polinom_by_data)) # формула
 
